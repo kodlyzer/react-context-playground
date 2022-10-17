@@ -1,9 +1,9 @@
-import { useMemo, useState, createContext } from 'react';
-export const AppContext = createContext({ toggleEditMode: () => {} });
+import React, { useMemo, useState, createContext } from 'react';
+export const AppContext = createContext({ toggleEditMode: () => { } });
 
 export const AppProvider = ({ children }) => {
   const [isEditMode, setEditMode] = useState(false);
-  const value  = useMemo(
+  const value = useMemo(
     () => ({
       toggleEditMode: () => {
         setEditMode((prevMode) => !prevMode);

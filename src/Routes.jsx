@@ -9,7 +9,7 @@ import DefaultSuspenseFallback from './components/DefaultSuspenseFallback';
 import App from './pages/App';
 import paths from './utils/routes.utils';
 
-const Dashboard = React.lazy(() => import('./components/Dashboard'));
+const Dashboard = React.lazy(() => import('./utils/dashboard.context'));
 
 const router = createBrowserRouter([
   {
