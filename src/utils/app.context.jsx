@@ -1,4 +1,4 @@
-import React, { useMemo, useState, createContext } from 'react';
+import { useMemo, useState, createContext } from 'react';
 export const AppContext = createContext({ toggleEditMode: () => { } });
 
 export const AppProvider = ({ children }) => {

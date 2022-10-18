@@ -1,7 +1,7 @@
 import DashboardProvider from '../utils/dashboard.context'
 import DCard from './DCard'
 
-const Dashboard = ({ accountDetails, setAccountDetails }) => {
+const Dashboard = ({ accountDetails }) => {
     debugger;
     return (
 
