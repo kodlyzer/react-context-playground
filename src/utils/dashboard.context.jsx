@@ -25,7 +25,7 @@ const DashboardProvider = ({ children }) => {
 
     const value = useMemo(() => ({
         accountDetails,
-        setAccountDetails
+        setAccountDetails: (cardValue, arrIndex) => setAccountDetails(...accountDetails, cardValue)
     }), [accountDetails])
 
     return <DashboardContext.Provider value={value}>{children}</DashboardContext.Provider>
