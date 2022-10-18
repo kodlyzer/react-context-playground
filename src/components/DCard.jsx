@@ -1,7 +1,11 @@
 
-import { useForm } from "react-hook-form";
+import { useForm } from "react-hook-form"
+import { AppContext } from '../utils/app.context'
+import { useContext } from 'react'
 
-const DCard = ({ title, value, isEditMode, key, setAccountDetails }) => {
+const DCard = ({ title, value, key }) => {
+    const { setAccountDetails } = useContext(DashboardContext);
+    const { isEditMode } = useContext(AppContext);
     const { register, handleSubmit } = useForm({ shouldUseNativeValidation: true })
     const onSubmit = async data => { setAccountDetails(key, data) }
 

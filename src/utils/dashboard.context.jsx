@@ -1,6 +1,6 @@
 import { createContext, useMemo, useState } from 'react';
 
-const DashboardContext = createContext()
+export const DashboardContext = createContext()
 
 const DashboardProvider = ({ children }) => {
     const [accountDetails, setAccountDetails] = useState([{
