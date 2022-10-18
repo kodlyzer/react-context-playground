@@ -29,9 +29,9 @@ const DashboardProvider = ({ children }) => {
             let accClone = [...accountDetails]
             accClone[arrIndex] = {
                 title: accClone[arrIndex].title,
-                value: cardValue
+                value: cardValue?.value
             }
-            return [...accClone]
+            setAccountDetails(accClone)
         }
     }), [accountDetails])
 
