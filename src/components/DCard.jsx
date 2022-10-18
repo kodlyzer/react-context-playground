@@ -7,12 +7,12 @@ import { DashboardContext } from '../utils/dashboard.context'
 const DCard = ({ title, value, index }) => {
     const { setAccountDetails } = useContext(DashboardContext);
     const { isEditMode } = useContext(AppContext);
-    const { register, getValues } = useForm()
-    const onSubmit = async data => { setAccountDetails(getValues('value'), index) }
+    const { register, handleSubmit } = useForm({ defaultValues: { value: value }, shouldUseNativeValidation: true })
+    const onSubmit = data => { setAccountDetails(data, index) }
 
     return isEditMode ? (
-        <form onSubmit={onSubmit}>
-            <input type="text" {...register('value')} value={value} />
+        <form onSubmit={handleSubmit(onSubmit)}>
+            <input {...register("value")} />
             <input type="submit" value="Update" />
         </form>
     ) : (<div className='card w-80'>
