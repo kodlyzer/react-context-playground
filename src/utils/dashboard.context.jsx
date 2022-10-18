@@ -28,7 +28,7 @@ const DashboardProvider = ({ children }) => {
         setAccountDetails
     }), [accountDetails])
 
-    return <DashboardContext.Provider value={value}> {children} </DashboardContext.Provider>
+    return <DashboardContext.Provider value={value}>{children}</DashboardContext.Provider>
 }
 
 export default DashboardProvider

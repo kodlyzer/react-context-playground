@@ -6,7 +6,7 @@ export const AppProvider = ({ children }) => {
   const value = useMemo(
     () => ({
       toggleEditMode: () => {
-        setEditMode((prevMode) => !prevMode);
+        setEditMode(!isEditMode);
       },
       isEditMode: isEditMode,
     }),
